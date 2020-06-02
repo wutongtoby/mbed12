@@ -41,9 +41,9 @@ int main(void)
     servo.period(0.02);
     int i = 0;
     
-    while(i<=150) {
+    while(i <= 150) {
 	// set a specific speed 
-        servo_control(i);
+        servo_control(200);
 
 	// reset the steps parameter 
         steps = 0;
@@ -51,13 +51,14 @@ int main(void)
         t.reset();
         t.start();
 
-        wait(8);
+        wait(1);
 
         float time = t.read();
-	float speed = (steps / 32.0) / (6.5 * 3.14) / time;
+	//float speed = (steps / 32.0) * (6.5 * 3.14) / time;
 	// steps / 32 = number of turns
 	// 6.5 * 3.14 = 2 * pi * r
-        pc.printf("%1.3f\r\n", speed);
+    pc.printf("%1.3f\r\n", (float)steps*6.5*3.14/32/time);
+
 
         i += 30;
     }

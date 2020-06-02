@@ -14,6 +14,7 @@ serdev = '/dev/ttyACM0'
 s = serial.Serial(serdev)
 
 for i in range(0, n):
+    print(i)
     line=s.readline() # Read a string from K66F terminated with '\n'
     print (line)
     y[i] = float(line)

@@ -1,80 +1,80 @@
 [
     {
-        "module": "../..",
         "size": {
             ".text": 29787,
-            ".text-delta": 0,
-            ".data": 473,
             ".bss": 6610,
             ".bss-delta": 0,
-            ".data-delta": 0
-        }
+            ".text-delta": 0,
+            ".data-delta": 0,
+            ".data": 473
+        },
+        "module": "../.."
     },
     {
-        "module": "BUILD/K66F",
         "size": {
             ".text": 144,
-            ".text-delta": -4,
-            ".data": 0,
             ".bss": 4,
             ".bss-delta": 0,
-            ".data-delta": 0
-        }
+            ".text-delta": -4,
+            ".data-delta": 0,
+            ".data": 0
+        },
+        "module": "BUILD/K66F"
     },
     {
-        "module": "[fill]",
         "size": {
             ".text": 124,
-            ".text-delta": -4,
-            ".data": 11,
             ".bss": 29,
             ".bss-delta": 0,
-            ".data-delta": 0
-        }
+            ".text-delta": -4,
+            ".data-delta": 0,
+            ".data": 11
+        },
+        "module": "[fill]"
     },
     {
-        "module": "[lib]/c.a",
         "size": {
             ".text": 24549,
-            ".text-delta": 0,
-            ".data": 2472,
             ".bss": 89,
             ".bss-delta": 0,
-            ".data-delta": 0
-        }
+            ".text-delta": 0,
+            ".data-delta": 0,
+            ".data": 2472
+        },
+        "module": "[lib]/c.a"
     },
     {
-        "module": "[lib]/gcc.a",
         "size": {
             ".text": 3112,
-            ".text-delta": 0,
-            ".data": 0,
             ".bss": 0,
             ".bss-delta": 0,
-            ".data-delta": 0
-        }
+            ".text-delta": 0,
+            ".data-delta": 0,
+            ".data": 0
+        },
+        "module": "[lib]/gcc.a"
     },
     {
-        "module": "[lib]/misc",
         "size": {
             ".text": 180,
-            ".text-delta": 0,
-            ".data": 4,
             ".bss": 28,
             ".bss-delta": 0,
-            ".data-delta": 0
-        }
+            ".text-delta": 0,
+            ".data-delta": 0,
+            ".data": 4
+        },
+        "module": "[lib]/misc"
     },
     {
-        "module": "[lib]/nosys.a",
         "size": {
             ".text": 32,
-            ".text-delta": 0,
-            ".data": 0,
             ".bss": 0,
             ".bss-delta": 0,
-            ".data-delta": 0
-        }
+            ".text-delta": 0,
+            ".data-delta": 0,
+            ".data": 0
+        },
+        "module": "[lib]/nosys.a"
     },
     {
         "summary": {

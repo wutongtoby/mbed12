@@ -21,9 +21,9 @@ int main() {
     // so the inital duty cycle will be 20%
     
     while(1) {
-        servo_control(100.0);
+        servo_control(0.0);
         wait(2);
-        servo_control(100.0);
+        servo_control(0.0);
         wait(2);
     }
 }
