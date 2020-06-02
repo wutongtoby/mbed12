@@ -35,7 +35,7 @@ void encoder_control(void)
 int main(void) 
 {
     pc.baud(9600);
-    encoder_ticker.attach(&encoder_control, 0.01);
+    encoder_ticker.attach(&encoder_control, 0.001);
     
     // set the duty cycle
     servo.period(0.02);
@@ -43,7 +43,7 @@ int main(void)
     
     while(i <= 150) {
 	// set a specific speed 
-        servo_control(200);
+        servo_control(i);
 
 	// reset the steps parameter 
         steps = 0;
@@ -51,7 +51,7 @@ int main(void)
         t.reset();
         t.start();
 
-        wait(1);
+        wait(8);
 
         float time = t.read();
 	//float speed = (steps / 32.0) * (6.5 * 3.14) / time;

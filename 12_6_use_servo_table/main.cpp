@@ -35,13 +35,13 @@ int main(void)
 {
     pc.baud(9600);
 
-    encoder_ticker.attach(&encoder_control, .01);
+    encoder_ticker.attach(&encoder_control, .001);
 
     servo.period(.02);
 
     while(1) {
         //TODO: revise this value according to your result
-        servo_control(37.222);
+        servo_control(39.6811);
 
         steps = 0;
         t.reset();
