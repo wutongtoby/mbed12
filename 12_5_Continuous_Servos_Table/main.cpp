@@ -19,7 +19,7 @@ void servo_control(int speed)
     else if (speed < -200) 
         speed = -200;
 
-    servo = (CENTER_BASE + speed)/20000.0f;
+    servo = (CENTER_BASE + speed) / 20000.0f;
 }
 
 void encoder_control(void)
@@ -35,14 +35,17 @@ void encoder_control(void)
 int main(void) 
 {
     pc.baud(9600);
-    encoder_ticker.attach(&encoder_control, .01);
-
-    servo.period(.02);
+    encoder_ticker.attach(&encoder_control, 0.01);
+    
+    // set the duty cycle
+    servo.period(0.02);
     int i = 0;
     
     while(i<=150) {
+	// set a specific speed 
         servo_control(i);
-        
+
+	// reset the steps parameter 
         steps = 0;
 
         t.reset();
@@ -51,8 +54,10 @@ int main(void)
         wait(8);
 
         float time = t.read();
-
-        pc.printf("%1.3f\r\n", (float)steps*6.5*3.14/32/time);
+	float speed = (steps / 32.0) / (6.5 * 3.14) / time;
+	// steps / 32 = number of turns
+	// 6.5 * 3.14 = 2 * pi * r
+        pc.printf("%1.3f\r\n", speed);
 
         i += 30;
     }
